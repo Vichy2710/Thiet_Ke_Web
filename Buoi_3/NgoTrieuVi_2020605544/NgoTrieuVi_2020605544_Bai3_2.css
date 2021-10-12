@@ -1,0 +1,24 @@
+body{
+    margin: 50px 50px 0 50px;
+}
+
+table, tr,td,th{
+    border-collapse: separate;
+    border: 1px inset #3300ff;
+    width: 450px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+}
+h2{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+}
+th, .canhgiua{
+    background-color: #660066;
+    color: #ffffff;
+    height: 50px;
+    font-size: 15px;
+    text-align: center;
+    width: 10%;
+    
+}

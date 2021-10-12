@@ -1,0 +1,19 @@
+body{
+    margin: 50px 50px 0 50px;
+}
+h2{
+    background-color: #ff9966;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    border-bottom: solid;
+    width: 500px;
+}
+th{
+    background-color: #f16119;
+    color: #ffffff;
+}
+table, tr, td,th{
+    border-collapse: collapse;
+    border:1px solid #990000;
+
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var diemTieuLuan=window.prompt("Diem tieu luan: ","diem");
+        var diemGiuaKy=window.prompt("Diem giua ky: ","diem");
+        var diemCuoiKy=window.prompt("Diem cuoi ky: ","diem");
+        var diem=diemCuoiKy*50/100 + diemGiuaKy*30/100 + diemTieuLuan*20/100;
+        if(diem>=8.5){
+            document.write("A");
+        }
+        else if(diem>=7.0){
+            document.write("B");
+        }
+        else if(diem>=5.5){
+            document.write("C");
+        }
+        else if(diem>=4.0){
+            document.write("D");
+        }
+        else {
+            document.write("F");
+        }
+    </script>
+</body>
+</html>

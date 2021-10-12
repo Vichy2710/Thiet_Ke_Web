@@ -1,0 +1,26 @@
+table{
+    width: 700px;
+    margin: auto;
+    margin-top: 0;
+    font-size: 20px;
+}
+
+td{
+    border: 1px red solid;
+    width:25%;
+}
+li{
+    margin-left: 30px;
+    box-sizing: border-box;
+}
+span{
+    font-weight: 600;
+    font-style: italic;
+}
+p{
+    color: #ff0000;
+    font-weight: 600;
+}
+ol li{
+    margin-bottom: 20px;
+}

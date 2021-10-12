@@ -1,0 +1,32 @@
+body{
+    background-color: #ffedca;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 70%;
+}
+.img{
+    width: 10%;
+    margin-right: 10%;
+}
+table{
+    border-collapse: collapse;
+}
+p{
+    color: #cc6600;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+th{
+    color:#ffffff;
+    background-color: #cc6600;
+    padding: 5px 10px;
+    border: solid 1px rgb(37, 16, 16) ;
+}
+td{
+    padding: 5px 10px;
+    border: solid 1px rgb(37, 16, 16) ;
+}

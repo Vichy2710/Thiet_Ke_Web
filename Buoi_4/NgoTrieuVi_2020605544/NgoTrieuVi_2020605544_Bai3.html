@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .k {
+            float: left;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .k div {
+            width: fit-content;
+            float: left;
+            background-color: blue;
+            color: aliceblue;
+            height: 30px;
+            width: 70px;
+            padding: 10px;
+        }
+
+        .k div:hover {
+            background-color: crimson;
+        }
+
+        .sub {
+            flex-direction: row;
+            display: flex;
+        }
+
+        .main:hover .sub {
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        .sub  {
+            width: fit-content;
+            background-color: crimson;
+            color: aliceblue;
+            height: 30px;
+            width: fit-content;
+            padding: 10px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body >
+    <div class="main" style="display: flex;flex-direction: column;">
+        <div class="k">
+            <div class="x">Chính trị-xã hội</div>
+            <div class="x">Thế giới</div>
+            <div class="x">Nhịp sống trẻ</div>
+            <div class="x">Giáo dục</div>
+            <div class="x">Kinh tế</div>
+        </div>
+        <div class="sub">
+            <p>Thư viện pháp luật</p>
+            <p>Sống khỏe</p>
+            <p>Pháp luật</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

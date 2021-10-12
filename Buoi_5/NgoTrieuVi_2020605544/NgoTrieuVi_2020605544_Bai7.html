@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var so=window.prompt("Nhap so nguyen co 5 chu so: ","so");
+        var t=0;
+        var x=4;
+        var sum=0;
+        while(so>0){
+            t+=(so%10) * Math.pow(10,x);
+            sum+=so%10;
+            x--;
+            so=(so-so%10)/10;
+        }
+        document.write(t);
+        document.write("<br>" + sum);
+
+    </script>
+</body>
+</html>
