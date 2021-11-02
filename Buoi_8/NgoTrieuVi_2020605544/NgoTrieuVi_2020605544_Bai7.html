@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Chuẩn hóa xâu</h2>
+    <form name="check">
+        Nhập Xâu Ban đầu = <input type="text" name="string" > <br>
+        Xâu sau khi bỏ ký tự đặc biệt <input type="text" name="ch" disabled> <br>
+
+        <input type="button" value="Xóa" onclick="DemTu()">
+        <input type="button" value="Chuẩn hóa" onclick="OutTu()">
+    </form>
+</body>
+
+<script>
+    function DemTu(){
+        document.check.string.value="";
+        document.check.ch.value="";
+
+    }
+    function OutTu(){
+        var str=document.check.string.value;
+        str=str.replace(/[^a-zA-Z0-9 ]/g, "")
+        document.check.ch.value=str;
+
+    }
+</script>
+</html>

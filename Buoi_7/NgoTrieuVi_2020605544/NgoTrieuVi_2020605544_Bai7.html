@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  
+  <body>
+    
+    <form name="out">
+      Nhập chuỗi: <input type="text" name="in" required/> <br />
+      <input type="submit" value="OnClick" onclick="clickk()" />
+    </form>
+  </body>
+  <script>
+    function clickk() {
+      var pattern = /^freetuts\.net$/i ;
+      if (pattern.test(document.out.in.value)) {
+        alert("Chuỗi freetuts.net");
+      } else {
+        alert("Không phải chuỗi freetuts.net");
+      }
+    }
+  </script>
+</html>

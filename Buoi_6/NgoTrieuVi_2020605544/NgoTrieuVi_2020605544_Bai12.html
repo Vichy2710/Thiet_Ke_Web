@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form name="x">
+      <h2 style="margin-left: 50px;">Tính tiền lương</h2>
+      Lương cơ bản: <input type="text" name="a" /> <br />
+      Xếp loại:<input type="text" name="b" /><br />
+      Tiền lương: <input type="text" name="luong" disabled /> <br />
+      <input type="button" value="Xóa" onclick="Xoa()" />
+      <input type="button" value="Tính" onclick="Tinh()" />
+    </form>
+  </body>
+  <script>
+    function Xoa(){
+        document.x.a.value=0;
+        document.x.b.value='';
+        document.x.luong.value=0;
+    }
+    function Tinh(){
+        var u=document.x.a.value;
+        var v=document.x.b.value;
+        var l=0,tru=0;
+        if(v=='A'){
+            l=2*u;
+        }
+        else if(v=='B'){
+            l=1.8*u;
+        }
+        else if(v=='C'){
+            l=1.5*u;
+        }
+        else{
+            l=1.2*u;
+        }
+
+        if(l<7){
+            tru=l/100*10;
+        }
+        else if(l<15){
+            tru=l/100*20;
+        }
+        else{
+            tru=l/100*30;
+        }
+        document.x.luong.value=l-tru;
+
+    }
+  </script>
+</html>

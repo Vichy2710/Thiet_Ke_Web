@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form name="x">
+      <h2 style="margin-left: 50px;">Tính tiền Karaoke</h2>
+      Giờ vào: <input type="text" name="vao" /> <br />
+      Giờ ra:<input type="text" name="ra" /><br />
+      Tổng tiền: <input type="text" name="tongTien" disabled /> <br />
+      <input type="button" value="Xóa" onclick="Xoa()" />
+      <input type="button" value="Tính" onclick="Tinh()" />
+    </form>
+  </body>
+  <script>
+    function Xoa(){
+        document.x.vao.value=0;
+        document.x.ra.value=0;
+        document.x.tongTien.value=0;
+
+    }
+    function Tinh(){
+        var a=parseInt(document.x.vao.value);
+        var b=parseInt(document.x.ra.value);
+        if(a<10){
+            if(b<=17){
+                document.x.tongTien.value=(b-10)*20000;
+            }
+            else{
+                document.x.tongTien.value=(b-17)*45000+7*20000;
+            }
+        }
+        else if(a<=17){
+            if(b<=17){
+                document.x.tongTien.value=(b-a)*20000;
+            }
+            else{
+                document.x.tongTien.value=(b-17)*45000+(17-a)*20000;
+            }
+        }
+        else{
+            document.x.tongTien.value=(b-a)*45000;
+        }
+    }
+  </script>
+</html>

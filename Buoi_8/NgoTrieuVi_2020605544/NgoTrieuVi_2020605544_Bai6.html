@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Tách ID</h2>
+    <form name="check">
+        Nhập Email = <input type="text" name="string" > <br>
+        ID là <input type="text" name="ch" disabled> <br>
+
+        <input type="button" value="Xóa" onclick="DemTu()">
+        <input type="button" value="Tách" onclick="OutTu()">
+    </form>
+</body>
+
+<script>
+    function DemTu(){
+        document.check.string.value="";
+        document.check.ch.value="";
+
+    }
+    function OutTu(){
+        var str=document.check.string.value;
+        var a="";
+        for (var i=0;i<str.length;i++){
+            if(str[i]=='@'){
+                break;
+            }
+            else{
+                a+=str[i];
+            }
+        }
+        document.check.ch.value=a;
+
+    }
+</script>
+</html>

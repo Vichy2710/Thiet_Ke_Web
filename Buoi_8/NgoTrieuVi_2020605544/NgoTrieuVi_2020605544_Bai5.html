@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Bài tập về chuỗi</h2>
+    <form name="check">
+        Câu nhập vào <input type="text" name="string" > <br>
+        Số từ <input type="text" name="So"disabled> <br>
+        Câu đã chuẩn hóa <input type="text" name="ch" disabled> <br>
+
+        <input type="button" value="Đếm từ" onclick="DemTu()">
+        <input type="button" value="Xuất câu" onclick="OutTu()">
+    </form>
+</body>
+
+<script>
+    function DemTu(){
+        var str=document.check.string.value;
+        str=str.toLowerCase().trim();
+        str=str.replace(/ +(?= )/g,'');
+        var dem=1;
+        for (var i=0;i<str.length;i++){
+            if(str[i]==' ')
+                dem++;
+        }
+        document.check.So.value=dem;
+
+
+    }
+    function OutTu(){
+        var str=document.check.string.value;
+        str=str.toLowerCase().trim();
+        str=str.replace(/ +(?= )/g,'');
+        
+        document.check.ch.value=str;
+
+
+    }
+</script>
+</html>

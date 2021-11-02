@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="x">
+        <h2 style="margin-left: 50px;">Chương trình tính tiền taxi</h2>
+        Số km đã đi được: <input type="text" name="a" /> <br />
+        Tiền thanh toán: <input type="text" name="b" disabled /> <br />
+        <input type="button" value="Xóa" onclick="Xoa()" />
+        <input type="button" value="Tính tiền" onclick="TinhTien()" />
+      </form>
+</body>
+<script>
+    function Xoa(){
+        document.x.a.value=0;
+        document.x.b.value=0;
+    }
+    function TinhTien(){
+        var km=document.x.a.value;
+        if(km<=1){
+            document.x.b.value=km*15000;
+        }
+        else if(km<=5) {
+            document.x.b.value=(km-1)*12000 +15000;
+        }
+        else {
+            document.x.b.value=5*12000 +15000 +(km-6)*9000;
+        }
+        if(km>=140){
+            document.x.b.value=document.x.b.value/100 *88;
+        }
+    }
+</script>
+</html>

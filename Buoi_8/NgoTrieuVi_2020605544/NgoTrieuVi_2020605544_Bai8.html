@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Chuẩn hóa xâu</h2>
+    <form name="check">
+        Nhập xâu 1 <input type="text" name="string1" > <br>
+        Nhập xâu 2 <input type="text" name="string2" > <br>
+        Kết quả <input type="text" name="ch" disabled> <br>
+
+        <input type="button" value="Xóa" onclick="DemTu()">
+        <input type="button" value="Kiểm tra" onclick="OutTu()">
+    </form>
+</body>
+
+<script>
+    function DemTu(){
+        document.check.string.value="";
+        document.check.ch.value="";
+
+    }
+    function OutTu(){
+        var str1=document.check.string1.value;
+        var str2=document.check.string2.value;
+        str1=str1.split('').sort().join('');
+        str2=str2.split('').sort().join('');
+        if(str1==str2){
+          document.check.ch.value=true;
+        }
+        else{
+          document.check.ch.value=false;
+
+        }
+
+    }
+</script>
+</html>

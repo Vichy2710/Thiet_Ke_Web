@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  
+  <body>
+    <h2 style="border-bottom: 1px solid black;padding-bottom: 25px;">Login Information</h2>
+    <form name="out">
+      Username: <input type="text" name="username" required/> <br /> <br>
+      Password: <input type="text" name="password" required/> <br /> <br>
+      <input style="margin-left: 50px;" type="checkbox" name="namee" id="idd"> Remember Set <br> <br>
+      <input style="margin-left: 50px;" type="submit" value="Login" onclick="login()" />
+      <input style="margin-left: 10px;" type="submit" value="Reset" onclick="reset()" />
+
+    </form>
+  </body>
+  <script>
+    function reset(){
+        document.out.password.value="";
+        document.out.username.value="";
+
+    }
+    function login() {
+      var pattern = /^(?=.*[A-Za-z0-9])(?=.*[A-Z]+)[^0-9][A-Za-z0-9]{8,}$/;
+      if (pattern.test(document.out.password.value)) {
+        alert("Đăng nhập thành công");
+      } else {
+        alert("Đăng nhập không thành công");
+      }
+    }
+  </script>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Kết quả
+    </h2>
+    <form name="check">
+      Gia tri tat ca cac phan tu trong mang:
+      <input type="text" name="a1" disabled /> <br />
+      Gia tri cac phan tu co chi so le trong mang:
+      <input type="text" name="a2" disabled /> <br />
+      Gia tri cac phan tu co chi so chan trong mang:
+      <input type="text" name="a3" disabled /> <br />
+      Gia tri cac phan tu co gia tri le trong mang:
+      <input type="text" name="a4" disabled /> <br />
+      Gia tri cac phan tu co gia tri chan trong mang:
+      <input type="text" name="a5" disabled /> <br />
+      Gia tri cac phan tu co gia tri am trong mang:
+      <input type="text" name="a6" disabled /> <br />
+      Gia tri cac phan tu co gia tri duong trong mang:
+      <input type="text" name="a7" disabled /> <br />
+      Gia tri cac phan tu co gia tri chia het cho 3 trong mang:
+      <input type="text" name="a8" disabled /> <br />
+    </form>
+  </body>
+  <script>
+    var inputArray = [];
+    var n = prompt("Enter number of elements: ");
+    for (var i = 0; i<n; i++) {
+      inputArray[i] = Number(prompt("Enter Element " + (i + 1)));
+    }
+    var sum=0;
+    for (i=0;i<n;i++)
+        sum+=inputArray[i];
+    document.check.a1.value=sum;
+    sum=0;
+    for (i=0;i<n;i++)
+        if(i%2==1)
+            sum+=inputArray[i];
+    document.check.a2.value=sum;
+    sum=0;
+    for (i=0;i<n;i++)
+        if(i%2==0)
+            sum+=inputArray[i];
+    document.check.a3.value=sum;
+    sum=0;
+    for (i=0;i<n;i++)
+        if(inputArray[i]%2==1 || inputArray[i]%2==-1)
+            sum+=inputArray[i];
+    document.check.a4.value=sum;
+    sum=0;
+    for (i=0;i<n;i++)
+        if(inputArray[i]%2==0)
+            sum+=inputArray[i];
+    document.check.a5.value=sum;
+    sum=0;
+    for (i=0;i<n;i++)
+        if(inputArray[i]<0)
+            sum+=inputArray[i];
+    document.check.a6.value=sum;
+    sum=0;
+    for (i=0;i<n;i++)
+        if(inputArray[i]>0)
+            sum+=inputArray[i];
+    document.check.a7.value=sum;
+    sum=0;
+    for (i=0;i<n;i++)
+        if(inputArray[i]%3==0)
+            sum+=inputArray[i];
+    document.check.a8.value=sum;
+  </script>
+</html>

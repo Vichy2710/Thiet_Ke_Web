@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Kiểm tra</h2>
+    <form name="check">
+        Nhập Xâu = <input type="text" name="string" > <br>
+        Số ký tự chữ cái có trong xâu là <input type="text" name="so" disabled> <br>
+        <input type="button" value="Xóa" onclick="Xoa()">
+         <input type="button" value="Đếm" onclick="Dem()">
+    </form>
+</body>
+<script>
+    function Xoa(){
+        document.check.string.value="";
+        document.check.so.value=0;
+
+    }
+    function Dem(){
+        var str=document.check.string.value;
+        var dem=0;
+        str.toLowerCase();
+        for (var i=0;i<str.length;i++){
+            if(str[i]>='a' && str[i]<='z')
+                dem++;
+        }
+        document.check.so.value=dem;
+    }
+</script>
+</html>

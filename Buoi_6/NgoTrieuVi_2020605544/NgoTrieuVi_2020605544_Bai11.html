@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="x">
+        <h2 style="margin-left: 50px;">Tính cước phí điện thoại</h2>
+        Số Phút gọi: <input type="text" name="a" /> <br />
+        Tiền cước: <input type="text" name="b" disabled /> <br />
+        <input type="button" value="Xóa" onclick="Xoa()" />
+        <input type="button" value="Tính" onclick="TinhTien()" />
+      </form>
+</body>
+<script>
+    function Xoa(){
+        document.x.a.value=0;
+        document.x.b.value=0;
+    }
+    function TinhTien(){
+        var n=document.x.a.value;
+        var i, sum=25000;
+        if(n<=50){
+            sum+=n*600;
+        }
+        else if(n<=200){
+            sum+=600*50 + (n-50)*400;
+        }
+        else{
+            sum+=600*50 + 400*150 + (n-200)*200;
+        }
+        document.x.b.value=sum;
+    }
+</script>
+</html>

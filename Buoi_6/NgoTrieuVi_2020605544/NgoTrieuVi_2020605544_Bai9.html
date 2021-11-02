@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form name="x">
+      <h2 style="margin-left: 50px;">Tính tiền sân bóng</h2>
+      Nhập giờ vào: <input type="text" name="vao" /> <br />
+      Nhập giờ ra:<input type="text" name="ra" /><br />
+      Đơn giá theo giờ: <input type="text" name="gio"/> <br />
+      Số bình uước: <input type="text" name="binh" /> <br />
+      Đơn giá bình nước: <input type="text" name="nuoc"/> <br />
+      Tổng tiền: <input type="text" name="tong" disabled /> <br />
+      
+      <input type="button" value="Xóa" onclick="Xoa()" />
+      <input type="button" value="Tính" onclick="Tinh() " />
+    </form>
+  </body>
+  <script>
+    function Xoa(){
+        document.x.vao.value=0;
+        document.x.ra.value=0;
+        document.x.gio.value=0;
+        document.x.binh.value=0;
+        document.x.nuoc.value=0;
+        document.x.tong.value=0;
+
+
+
+    }
+    function Tinh(){
+        var tienGio=(document.x.ra.value-document.x.vao.value)*document.x.gio.value;
+        var tienNuoc=document.x.binh.value * document.x.nuoc.value;
+        document.x.tong.value= tienGio+ tienNuoc;
+        setTimeout(ThongBao,2000)
+    }
+    function ThongBao(){
+        if(document.x.tong.value>=1000000){
+            alert("Khách vip");
+        }
+        else{
+            alert("Khách thường");
+        }
+    }
+  </script>
+</html>
