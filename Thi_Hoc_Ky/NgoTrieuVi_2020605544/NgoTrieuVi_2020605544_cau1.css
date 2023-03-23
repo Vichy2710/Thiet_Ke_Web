@@ -1,0 +1,149 @@
+body{
+    margin: 0;
+}
+img{
+    width: 100%;
+}
+.fl{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+a{
+    text-decoration: none;
+}
+.header{
+    width: 100%;
+
+}
+.dau{
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+}
+.dau .img{
+    width: 10%;
+}
+
+.cart{
+    width: 10%;
+    color: red;
+    justify-content: right;
+}
+.duoi{
+    width: 100%;
+    height: 40px;
+    margin-top: 40px;
+    
+    margin-bottom: 20px;
+    background-color: #ff3399;
+    line-height: 40px;
+}
+.cacchu{
+    width: 40%;
+    color: white;
+    text-align: center;
+}
+.o{
+    width: 25%;
+}
+.cacchu .o:hover{
+    background-color: #ffccff;
+}
+.contain{
+    background-color: WHITE;
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.menuPhai{
+    background-color: #00A69B;
+    width: 20%;
+    height: fit-content;
+    color: black;
+    background-color: white;
+
+}
+.linkBox{
+    height: 50px;
+    border: 1px #999 solid;
+}
+.linkBox a{
+    text-decoration: none;
+    color: black;
+    line-height: 50px;
+}
+.cap1{
+    position: relative;
+}
+.cap1:hover .cap2{
+    display: block;
+}
+.cap2{
+    margin-left: 100%;
+    margin-top: -10%;
+    position: absolute;
+    display: none;
+    color: black;
+    background-color: white;
+
+}
+.cap2 .linkBox{
+    width: 160px;
+}
+
+.giua{
+    width: 75%;
+    display: flex;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    border: black 1px solid;
+    padding: 20px;
+    background-color: white;
+}
+
+.sau{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.con{
+box-sizing: border-box;
+    width:20%;
+    margin: 0;
+}
+strong:hover{
+    color: white;
+    background-color: #FF33CC;
+}
+.con .img{
+    padding: 10%;
+    width: 80%;
+}
+.gia{
+    font-weight:  600;
+    color: black;
+}
+h4{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.con .img:hover .them{
+    display: flex;
+    flex-direction: row;
+}
+.them{
+    border: 1px solid black;
+    margin-left: -100%;
+    position: absolute;
+    width:200%;
+    display: none;
+    background-color: white;
+    
+}

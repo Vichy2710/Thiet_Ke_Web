@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form name="tab" style="width: 700px">
+      <h3 style="text-align: center">HÓA ĐƠN TIỀN PHÒNG</h3>
+      <strong style="margin-right: 10px">Mã Hóa Đơn: </strong>
+      <input style="margin-right: 10px" type="text" name="maHD" id="ma" required />
+      <strong style="margin-right: 50px">Tên Khách: </strong>
+      <input style="margin-right: 10px" type="text" name="tenKhach" id="tenKhach" required />
+      <br />
+      <br />
+      <strong style="margin-right: 20px">Loại Phòng: </strong>
+      <input style="margin-right: 10px"  id="loaiphong" required
+      />
+      <strong style="margin-right: 37px">Số Ngày thuê: </strong>
+      <input
+        style="margin-right: 10px"
+        type="text"
+        name="soNgay"
+        id="ngaythue"
+        required
+      />
+      <br />
+      <br />
+      <strong style="margin-right: 4px">Tiền Phải Trả: </strong>
+      <input
+        style="margin-right: 10px"
+        type="text"
+        name="tien"
+        id="tientra"
+        readonly
+      />
+      <strong style="margin-right: 6px">Loại Khách Hàng: </strong>
+      <input
+        style="margin-right: 10px"
+        type="text"
+        name="loaiKhach"
+        id="loaikhach"
+        readonly
+      />
+      <br />
+      <br />
+      <div style="text-align: center">
+        <input
+          style="margin-left: 40px"
+          type="button"
+          value="Tính Tiền"
+          onclick="tinh()"
+        />
+        <input
+          style="margin-left: 10px"
+          type="button"
+          value="Hủy Bỏ"
+          onclick="huyBo()"
+        />
+      </div>
+    </form>
+    <script>
+      function huyBo() {
+        document.getElementById("ma").value = "";
+        document.getElementById("tenKhach").value = "";
+        document.getElementById("loaiphong").value = "";
+        document.getElementById("ngaythue").value = 0;
+        document.getElementById("tientra").value = 0;
+        document.getElementById("loaikhach").value= "";
+      }
+
+      function tinh() {
+        var lp = document.getElementById("loaiphong").value;
+        var ngaythue = document.getElementById("ngaythue").value;
+        if (lp == "A") {
+          if (ngaythue > 15) {
+            document.getElementById("tientra").value =
+              ngaythue * 300 - 0.1 * 300;
+            document.getElementById("loaikhach").value = "Thuê ngày dài";
+          } else {
+            document.getElementById("tientra").value = ngaythue * 300;
+            document.getElementById("loaikhach").value = "Thuê ngắn ngày";
+          }
+        } else if (lp == "B") {
+          if (ngaythue > 15) {
+            document.getElementById("tientra").value =
+              ngaythue * 200 - 0.1 * 200;
+            document.getElementById("loaikhach").value = "Thuê ngày dài";
+          } else {
+            document.getElementById("tientra").value = ngaythue * 200;
+            document.getElementById("loaikhach").value = "Thuê ngắn ngày";
+          }
+        } else if (lp == "C") {
+          if (ngaythue > 15) {
+            document.getElementById("tientra").value =
+              ngaythue * 100 - 0.1 * 100;
+            document.getElementById("loaikhach").value = "Thuê ngày dài";
+          } else {
+            document.getElementById("tientra").value = ngaythue * 100;
+            document.getElementById("loaikhach").value = "Thuê ngắn ngày";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

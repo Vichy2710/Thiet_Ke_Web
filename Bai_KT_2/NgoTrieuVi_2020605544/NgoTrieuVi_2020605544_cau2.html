@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="tinhtien">
+        <table border="1" width="250px" cellspacing=0 style="background-color: rgb(185, 240, 240);">
+            <tr>
+                <th colspan="2" align="center">Chuẩn hóa mảng</th>
+            </tr>
+            <tr>
+                <td align="center">Nhập mảng</td>
+                <td align="center" align="center">
+                    <input type="text" name="input" required>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">mảng sau khi chuẩn hóa</td>
+                <td align="center">
+                    <input type="text" name="ketQua" disabled>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="reset" value="Hủy">
+                    <input type="button" value="Chuẩn hóa" onclick="tinh()">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function tinh() {
+            var x = document.tinhtien.input.value;
+            var arr = x.split(',');
+            var arrDelete = arr.filter((item, index) => arr.indexOf(item) === index);
+            document.tinhtien.ketQua.value = arrDelete;
+        }
+    </script>
+</body>
+</html>

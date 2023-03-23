@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Tháng : <input type="text" id="thang">
+    Năm : <input type="text" id="nam"> <br>
+    Số ngày :   <p id="songay"></p><br>
+    <button onclick="doit()">Hiển thị</button>
+</body>
+<script>
+    function doit()
+{
+    var thang = document.getElementById('thang').value;
+    var nam = document.getElementById('nam').value;
+    if (nam % 400 == 0  || (nam % 4 == 0 && nam%100!=0))
+    {
+        if(thang == 4 || thang == 6 || thang == 9 || thang ==11){
+            document.getElementById('songay').innerHTML='Có 30 ngày'
+        }
+        else if(thang == 2)
+        {
+            document.getElementById('songay').innerHTML='Có 29 ngày'
+        }
+        else if(thang == 1 || thang == 3 || thang == 5 || thang ==7 || thang ==8 || thang ==10 || thang ==12){
+            document.getElementById('songay').innerHTML='Có 31 ngày'
+        }
+    }
+    else if(nam % 4 != 0 )
+    {
+        if(thang == 4 || thang == 6 || thang == 9 || thang ==11){
+            document.getElementById('songay').innerHTML='Có 30 Ngày'
+        }
+        else if(thang == 2)
+        {
+            document.getElementById('songay').innerHTML='Có 28 ngày'
+        }
+        else if(thang == 1 || thang == 3 || thang == 5 || thang ==7 || thang ==8 || thang ==10 || thang ==12){
+            document.getElementById('songay').innerHTML='Có 31 ngày'
+        }
+    }      
+}
+</script>
+</html>

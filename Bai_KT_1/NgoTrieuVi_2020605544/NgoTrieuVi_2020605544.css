@@ -1,0 +1,149 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+}
+img{
+    width: 100%;
+}
+
+.heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 200px;
+    width:100%;
+    text-align: center;
+}
+.heading .img{
+    width: 5%;
+}
+.tenTruong{
+    color: #00CC66;
+    font-size: 20;
+    width: 60%;
+    font-weight: 600;
+}
+.tenTruong span{
+    font-size: 16;
+    color: black;
+}
+.link{
+    display: flex;
+    flex-direction: column;
+}
+.link .in{
+    display: flex;
+    flex-direction: row;
+}
+.link .nut{
+    background-color: #00CC66;
+    height: 20px;
+    width: 70px;
+
+}
+.nut a{
+    text-decoration: none;
+    color: white;
+}
+.nut:hover a{
+    color: red;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: -50px;
+}
+.main div{
+    font-size: 20;
+    font-weight: 600;
+    line-height: 50px;
+    height: 50px;
+}
+.them a{
+    text-decoration: none;
+    color: white;
+}
+.them{
+    background-color:  #00CC66;
+
+}
+.them .x{
+    width: fit-content;
+    text-align: center;
+}
+.them .x:hover > a{
+    color: #ffff33;
+}
+.cap1{
+    position: relative;
+}
+.cap1:hover .cap2{
+    display: block;
+}
+.cap2{
+    position: absolute;
+    width: 400%;
+    display: none;
+}
+.cap2 div{
+    background-color:#00CC66;
+    border: 1px dotted white;
+    text-align: center;
+    
+}
+.cap2 div a{
+    color: white;
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.content .con{
+    width: 30%;
+    background-color: white
+    
+}
+.con .title{
+    background-color: #00CC66;
+    color: white;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18;
+    margin-bottom: 10px;
+}
+.trong{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 10px 0;
+    justify-content: space-between;
+}
+.trong .tenBai{
+    margin-left: 10px;
+    width: 75%;
+}
+.trong .tenBai strong:hover{
+    color: red;
+}
+.trong .img{
+    width: 20%;
+}
+.trong .ngay{
+    color: #666666;
+}
+.anh{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 10px 0;
+    justify-content: space-between;
+}
+.anh .img{
+    width: 16%;
+}
